@@ -1,0 +1,53 @@
+# Virtual Environment
+
+venv/
+env/
+
+# Python Cache
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook Checkpoints
+
+.ipynb_checkpoints/
+
+# MLflow
+
+mlruns/
+
+# Model Files
+
+models/*.pkl
+models/*.joblib
+
+# Dataset Files
+
+data/*.csv
+data/*.xlsx
+data/*.json
+
+# VS Code
+
+.vscode/
+
+# Logs
+
+*.log
+
+# OS Files
+
+.DS_Store
+Thumbs.db
+
+# Build Files
+
+build/
+dist/
+*.egg-info/
+
+# Environment Variables
+
+.env
