@@ -31,7 +31,7 @@ def train_model(df):
             boosting_type='gbdt',
             objective='binary',
             metric='auc',
-            n_estimators=1000,
+            n_estimators=5000,
             learning_rate=0.007,
             num_leaves=32,
             max_depth=6,
@@ -65,7 +65,7 @@ def train_model(df):
     f1_scores = (2 * precisions * recalls /(precisions + recalls + 1e-8))
     best_idx = np.argmax(f1_scores)
     # best_threshold = thresholds[best_idx]
-    best_threshold = 0.45
+    best_threshold = 0.5
 
     print("\nBest Threshold:")
     print(best_threshold)
