@@ -92,10 +92,10 @@ def train_model(df):
     mlflow.sklearn.log_model(model,"lightgbm_model")
     print("\nMLflow Run Completed")
 
-    
+    joblib.dump(model,"models/model.pkl") 
+    print("Model Saved")
 
     train_model(df)
 
 
 
-# Implemented threshold tuning to improve recall and F1 score
