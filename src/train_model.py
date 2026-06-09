@@ -65,7 +65,7 @@ def train_model(df):
     f1_scores = (2 * precisions * recalls /(precisions + recalls + 1e-8))
     best_idx = np.argmax(f1_scores)
     # best_threshold = thresholds[best_idx]
-    best_threshold = 0.5
+    best_threshold = 0.45
 
     print("\nBest Threshold:")
     print(best_threshold)
@@ -98,3 +98,4 @@ def train_model(df):
 
 
 
+# Implemented threshold tuning to improve recall and F1 score
