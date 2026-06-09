@@ -1,6 +1,6 @@
 import numpy as np
 
-def Features(df):
+def features(df):
     df['AGE'] = abs(df['DAYS_BIRTH']) / 365
     df['YEARS_EMPLOYED'] = abs(df['DAYS_EMPLOYED']) / 365
     df['EMPLOYED_BIRTH_RATIO'] = (df['DAYS_EMPLOYED'] /(df['DAYS_BIRTH'] + 1))
