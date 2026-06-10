@@ -93,6 +93,7 @@ def train_model(df):
     print("\nMLflow Run Completed")
 
     joblib.dump(model,"models/model.pkl") 
+    # joblib.dump(X.columns.tolist(),"models/final_model.pkl")
     print("Model Saved")
 
     train_model(df)
