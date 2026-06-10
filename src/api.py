@@ -10,7 +10,7 @@ app = FastAPI(
 
 # Load model
 model = joblib.load('models/model.pkl')
-print("✅ Model loaded successfully - 39 features")
+print("Model loaded successfully - 39 features")
 
 class ClientData(BaseModel):
     NAME_CONTRACT_TYPE: float
