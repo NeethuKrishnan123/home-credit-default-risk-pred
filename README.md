@@ -18,131 +18,150 @@ The project follows a complete Machine Learning and MLOps workflow including:
 
 ---
 
+
 ## Dataset
 
-Home Credit Default Risk Dataset
+**Dataset:** Home Credit Default Risk Dataset
 
-Files Used:
+**Files Used:**
 
 * application_train.csv
 * bureau.csv
 
-Source: Kaggle Home Credit Default Risk Dataset
+**Source:** Kaggle Home Credit Default Risk Dataset
 
 ---
 
 ## Project Structure
 
+```text
 home-credit-default-risk-pred/
 
 ├── data/
-|   ├── application_train.csv 
-|   ├── bureau.csv 
-|   └── preprocessed_data.csv
-|   
+│   ├── application_train.csv
+│   ├── bureau.csv
+│   └── preprocessed_data.csv
+│
 ├── notebooks/
-|
+│
 ├── src/
-|   ├── preprocessing.py
-|   ├── feature_engineering.py
-|   ├── feature_selection.py
-|   ├── train_model.py
-|   ├── main.py
-|   └── api.py
-|
+│   ├── preprocessing.py
+│   ├── feature_engineering.py
+│   ├── feature_selection.py
+│   ├── train_model.py
+│   ├── main.py
+│   └── api.py
+│
 ├── models/
-|   └── model.pkl
-|
+│   └── model.pkl
+│
 ├── mlruns/
-|
+│
 ├── README.md
-|
 ├── .gitignore
-|
 └── requirements.txt
+```
 
 ---
 
 ## Workflow
 
-1. Data Preprocessing
-    * Load application_train.csv
-    * Load bureau.csv
-    * Bureau Aggregation
-    * Merge Datasets
-    * Missing Value Handling
-    * Target Encoding
-    * Drop Low Importance Features
+### 1. Data Preprocessing
 
-2. Feature Engineering
+* Load `application_train.csv`
+* Load `bureau.csv`
+* Bureau Aggregation
+* Merge Datasets
+* Missing Value Handling
+* Target Encoding
+* Drop Low Importance Features
+
+### 2. Feature Engineering
 
 Created Features:
-    * AGE
-    * YEARS_EMPLOYED
-    * EMPLOYED_BIRTH_RATIO
-    * GOODS_INCOME_RATIO
-    * EXT_SOURCE_RANGE
-    *  CREDIT_INCOME_RATIO
-    * ANNUITY_INCOME_RATIO
-    * PAYMENT_RATE
-    * GOODS_CREDIT_RATIO
-    * EXT_MEAN
-    * EXT_STD
-    * EXT_MIN
-    * EXT_MAX
-    * EXT_SUM
-    * BUREAU_DEBT_RATIO
-    * BUREAU_OVERDUE_RATIO
 
-3. Feature Selection
-    * Remove Weak Features
-    * Remove Highly Correlated Features
+* AGE
+* YEARS_EMPLOYED
+* EMPLOYED_BIRTH_RATIO
+* GOODS_INCOME_RATIO
+* EXT_SOURCE_RANGE
+* CREDIT_INCOME_RATIO
+* ANNUITY_INCOME_RATIO
+* PAYMENT_RATE
+* GOODS_CREDIT_RATIO
+* EXT_MEAN
+* EXT_STD
+* EXT_MIN
+* EXT_MAX
+* EXT_SUM
+* BUREAU_DEBT_RATIO
+* BUREAU_OVERDUE_RATIO
 
-4. Model Training
+### 3. Feature Selection
 
-Algorithm Used:
-    LightGBM Classifier
+* Remove Weak Features
+* Remove Highly Correlated Features
 
-Cross Validation:
-    5 Fold Cross Validation
+### 4. Model Training
 
-Evaluation Metrics:
-    * ROC-AUC Score
-    * Precision
-    * Recall
-    * F1 Score
+**Algorithm Used**
 
-5. MLflow Tracking
+* LightGBM Classifier
+
+**Cross Validation**
+
+* 5-Fold Cross Validation
+
+**Evaluation Metrics**
+
+* ROC-AUC Score
+* Precision
+* Recall
+* F1 Score
+
+### 5. MLflow Tracking
 
 MLflow is used for:
-    * Experiment Tracking
-    * Metric Logging
-    * Model Logging
+
+* Experiment Tracking
+* Metric Logging
+* Model Logging
 
 Tracked Metrics:
-    * ROC-AUC
-    * Precision
-    * Recall
-    * F1 Score
-    * Running the Pipeline
 
-Activate Virtual Environment
+* ROC-AUC
+* Precision
+* Recall
+* F1 Score
 
+---
+
+## Running the Pipeline
+
+### Activate Virtual Environment
+
+```bash
 venv\Scripts\activate
+```
 
-Run Pipeline
+### Run Pipeline
 
+```bash
 python src/main.py
+```
 
-Output:
-    * Preprocessed Data
-    * Trained Model
-    * MLflow Logs
-    * Saved Model File
-    * Model Deployment
+### Output
 
-Framework:
-    FastAPI
+* Preprocessed Data
+* Trained Model
+* MLflow Logs
+* Saved Model File
+
+---
+
+## Model Deployment
+
+**Framework:** FastAPI
 
 
 ---
@@ -157,7 +176,8 @@ Framework:
 * FastAPI
 * Joblib
 * Scikit-Learn
-* Git & GitHub
+* Git
+* GitHub
 
 
 
