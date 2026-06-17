@@ -10,11 +10,30 @@ The project follows a complete Machine Learning and MLOps workflow including:
 * Feature Engineering
 * Feature Selection
 * Model Training
-* Hyperparameter Tuning
+* Manual Hyperparameter Tuning
 * MLflow Experiment Tracking
 * Pipeline Automation
-* Git Version Control
+* API Development
 * Model Deployment
+* Git Version Control
+
+
+---
+
+## Live API Deployment 
+
+Hosted FastAPI Swagger Documentation:
+
+https://home-credit-default-risk-api.onrender.com/docs 
+
+---
+
+## MLOps Architecture
+
+<p align="center">
+  <img src="images/Architecture.jpeg" width="1200">
+</p>
+
 
 ---
 
@@ -37,6 +56,9 @@ The project follows a complete Machine Learning and MLOps workflow including:
 ```text
 home-credit-default-risk-pred/
 
+├── images/
+│   └── architecture.jpeg
+│
 ├── data/
 │   ├── application_train.csv
 │   ├── bureau.csv
@@ -159,10 +181,25 @@ python src/main.py
 
 ---
 
+## Running the API Locally 
+
+### Start FastAPI Server
+
+bash
+uvicorn src.api:app --reload
+
+
+### Open Swagger Documentation
+
+text
+http://127.0.0.1:8000/docs
+
+
 ## Model Deployment
 
-**Framework:** FastAPI
-
+* **Backend Framework:** FastAPI
+* **Cloud Platform:** Render 
+* **Model Serialization:** Joblib
 
 ---
 
